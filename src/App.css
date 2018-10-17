@@ -1,32 +1,172 @@
-.App {
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+
+html,
+body,
+#root,
+.app-container,
+.map-container {
+  height: 100%;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Sidebar with Cofee Shop list */
+
+.sidebar {
+  position: fixed;
+}
+
+.title {
+  color: rgb(159, 219, 159);
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.coffee-shop-list {
+  width: 250px;
+  height: calc(100% - 120px);
+  position: fixed;
+  background: #333333;
+  z-index: 1;
+  overflow-y: auto;
+  margin-top: 120px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.coffee-shop {
+  padding: 10px 15px;
+  color: #b9b9b9;
+  cursor: pointer;
+}
+
+.coffee-shop:hover {
+  background-color: rgb(159, 219, 159);
+  color: #333333
+}
+
+.heading {
+  position: fixed;
+  width: 250px;
+  background: #333333;
+}
+
+.filter-places {
+  width: 230px;
+  padding: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+}
+
+/* Sidebar with Cofee Shop list */
+
+/* Coffee-Menu Button */
+
+.coffee-menu-button {
+  margin: 0;
+  position: absolute;
+  background: rgb(159, 219, 159);
+  opacity: 0.7;
+  z-index: 5;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.coffee-menu-button img {
+  width: 32px;
+}
+
+.coffee-menu-button img:hover{
+  position: relative;
+  animation-name: coffee-menu;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+.coffee-menu-button img:active{
+  transform: rotate(-45deg);
+  left:0px; 
+  top:0px;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes coffee-menu {
+  0%   {transform: rotate(0); left:0px; top:0px;}
+  50%  {transform: rotate(-45deg); left:0px; top:0px;}
+  100% {transform: rotate(0); left:0px; top:0px;}
+}
+
+.map-container,
+.coffee-menu-button {
+  transition: 1s ease all;
+}
+
+/* End of Coffee-Menu Button */
+
+/* InfoWindow */
+
+.info-window {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(150px, 0);
+  width: 300px;
+  background: #333333;
+  cursor: move;
+  padding: 0 20px 20px;
   color: white;
+  border: 5px solid white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.close-window {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  margin: 0;
+  cursor: pointer;
+  color: rgb(159, 219, 159);
+  font-size: 25px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.info-name, .info-address, .info-rating {
+  margin-top: 20px;
+  margin-right: 50px;
+  font-weight: bold;
+  border-left: 7px solid rgb(159, 219, 159);
+}
+
+.info-address, .info-rating {
+  border-left: 3px solid rgb(159, 219, 159);
+}
+
+.info-picture{
+  border: 1px solid white;
+}
+
+/* End of InfoWindow */
+
+.error {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 40px;
+  background: #ff4040;
+  color: #fff;
+  transition: 0.3s ease all;
+}
+
+@media screen and (max-width: 600px) {
+  .coffee-menu-button {
+    padding: 25px 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .info-window,
+  .info-window img {
+    width: 250px;
   }
 }
