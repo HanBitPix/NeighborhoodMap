@@ -40,7 +40,7 @@ class Map extends Component {
       style={{marginLeft: '250px'}}>
       <GoogleMaps
         isMarkerShown={this.props.places.length > 0}
-        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyBH22_gy7-nw4S4g9sDyB61Cz8MDwMI1pY&v=3.exp&libraries=geometry,drawing,places&callback=onMapLoaded'
+        googleMapURL='https://maps.googleapis.com/maps/api/js?key=AIzaSyDr0SgNXJt98Kbc9nhHs-YPPdiO9c7MnSk&v=3.exp&libraries=geometry,drawing,places&callback=onMapLoaded'
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `100%` }} />}
         mapElement={<div style={{ height: `100%` }} />}
