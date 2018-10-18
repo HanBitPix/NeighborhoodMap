@@ -8,12 +8,12 @@
 ## `Coffee Shop Markers on the Map`
 You can click on the Markers that are placed in the map and infowindow will pop showing the clicked coffee shop detail information
 
-![Screenshot](/src/img/home-page.png)
+![Screenshot](./infowindow.png)
 
 ## Search | Filter
 To filter and search a specific coffee shop type in the search
 
-![Screenshot](/src/img/search.png)
+![Screenshot](./filter-search.png)
 
 ### Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
